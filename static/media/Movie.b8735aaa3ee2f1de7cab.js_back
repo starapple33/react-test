@@ -1,0 +1,36 @@
+import PropTypes from "prop-types";
+
+function Movie({title, medium_cover_image, summary, genres}) {
+
+    console.log({title, medium_cover_image, summary, genres})
+
+    return <div>
+            <h2>{title}</h2>
+            <img src={medium_cover_image} alt={title}/>
+            <p>{summary}</p>
+            
+            
+            {/* <ul> */}
+                {/* {movie.genres.map((g) => (
+                <li key={g}>{g}</li>
+                ))}  */}
+                {/* {(hasOwnProperty("genres") ? <ul>
+                    {genres.map((g) => (
+                        <li key={g}>{g}</li>
+                    ))}
+                </ul>:null)} */}
+                {/* {console.log(movie.genres.map((g) => (
+                    {g}
+                )))} */}
+            {/* </ul> */}
+            </div>
+    
+}
+
+Movie.propType = {
+    title: PropTypes.string,
+    medium_cover_image: PropTypes.string.isRequired,
+    summary: PropTypes.string.isRequired
+}
+
+export default Movie;
